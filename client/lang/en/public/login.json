@@ -1,0 +1,15 @@
+{
+	"LOGIN": {
+		"HEADER": "Filament Chatbot Engine",
+		"SUBHEADER": "Login",
+		"FORGOTTENPASSWORD": "Forgotten your password?",
+		"RESETIT": "Reset it.",
+		"FORM": {
+			"EMAIL": "Email address",
+			"EMAIL_ERROR": "Please enter a valid email",
+			"PASSWORD": "Password",
+			"PASSWORD_ERROR": "Please enter a valid password",
+			"LOGIN": "Login"
+		}
+	}
+}

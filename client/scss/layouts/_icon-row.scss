@@ -1,0 +1,47 @@
+.icon-row {
+	.icon-row__icon-container{
+		text-align: center;
+	}
+
+	.icon-row__container{
+		@extend %clearfix;
+		    margin-top: $baseline;
+    		margin-bottom: $baseline;
+	}
+
+	.icon-row__content{
+		text-align: center;
+	}
+
+	&.icon-row--inline {
+
+		@include breakpoint(medium) {
+
+
+		.icon-row__content, .icon-row__icon-container{
+			text-align: left;
+			float:left;
+		}
+
+		.icon-row__content{
+			width:55%;
+		}
+
+		.icon-row__content{
+			width:60%;
+			margin-left: $baseline;
+		}
+
+		.icon-circle{
+			  width: 50px;
+			  height: 50px;
+			  line-height: 32%;
+		}
+
+		.icon, i{
+			@include rem("font-size", 30px);
+		}
+	}
+
+	}
+}

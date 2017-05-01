@@ -1,0 +1,26 @@
+{
+    "SETTINGS": {
+        "HEADER": "Settings",
+        "SUBHEADER": "Configure your bot",
+        "NAME": "Bot Name",
+        "NAME_INFO": "This will be displayed on the web widget",
+        "NAME_PLACEHOLDER": "e.g Qbot..",
+        "NAME_ERROR": "Bot name can not be blank",
+        "COLOR": "Brand Colour",
+        "COLOR_INFO": "Colour of the chat bubbles",
+        "COLOR_ERROR": "Colour can not be blank",
+        "FONT": "Font Colour",
+        "FONT_INFO": "Font colour of the chat bubbles",
+        "FONT_ERROR": "Font colour can not be blank",
+        "AVATAR": "Avatar Url",
+        "AVATAR_INFO": "avatar icon url (https)",
+        "AVATAR_ERROR": "Avatar can not be blank",
+        "INTRODUCTION": "Welcome Message",
+        "INTRODUCTION_INFO": "This will be shown on the welcome screen",
+        "INTRODUCTION_ERROR": "Introduction can not be empty",
+        "MENU": "Persistent Menu",
+        "MENU_INFO": "Add upto 5 options in the presistent menu",
+        "TITLE": "Title",
+        "URL": "Url"
+    }
+}

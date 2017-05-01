@@ -1,0 +1,33 @@
+{
+    "LANDING": {
+        "HEADER": "Analytic Reports",
+        "SUBHEADER": "View reports for your chatbot",
+        "OVERVIEW": "Overview",
+        "LOGS": "Logs",
+        "ACCURACY": "Accuracy",
+        "TOTAL_CALLS": "Total Calls",
+        "NO_QUERIES": "You have not made any queries yet.",
+        "BETWEEN": "Between",
+        "FROM_DATE": "From date:",
+        "TO_DATE": "To date:",
+        "TOTAL_CONVERSATIONS": "Conversations completed",
+        "TOTAL_MESSAGES": "Messages recieved",
+        "TOTAL_CORRECT": "Messages answered",
+        "TOTAL_INCORRECT": "Messages unanswered",
+        "QUERIES_CHANNEL": "Session by Channel",
+        "QUERIES_CHANNEL_SUBLINE": "Breakdown of sessions by channel",
+        "QUERIES_INTENT": "Messages by Top 5 Intents",
+        "QUERIES_INTENT_SUBLINE": "Breakdown of messages by the most popular intents",
+        "QUERIES_EMOTION": "Messages by Emotion",
+        "QUERIES_EMOTION_SUBLINE": "Breakdown of message by emotion",
+        "QUERIES_OVERTIME": "Conversations Overtime",
+        "QUERIES_OVERTIME_SUBLINE": "Conversation show overtime",
+        "QUERIES": "Latest Queries",
+        "QUERIES_SUBLINE": "List of the lastest messages recieved",
+        "CONVERSATIONS": "Conversations",
+        "CONVERSATIONS_SUBLINE": "Conversations by date",
+        "NO_CONVERSATIONS": "No conversations found.",
+        "FLAGGED": "Flagged Messages",
+        "FLAGGED_SUBHEADER": "Messages containing the flagged keywords"
+    }
+}

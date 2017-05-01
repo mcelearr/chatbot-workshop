@@ -1,0 +1,145 @@
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none !important;
+}
+
+.fade{
+	opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+}
+
+.animate.ng-hide {
+    display: block !important;
+    visibility: hidden;
+}
+
+.animate.fadeLeft.ng-hide-add {
+    -webkit-animation: fadeOut 0.3s;
+    -moz-animation: fadeOut 0.3s;
+    animation: fadeOut 0.3s;
+    visibility: visible;
+}
+
+.animate.fadeLeft.ng-hide-remove {
+    animation: fadeInLeft 0.6s;
+    -moz-animation: fadeInLeft 0.6s;
+    -webkit-animation: fadeInLeft 0.6s;
+}
+
+.animate.fadeRight.ng-hide-add {
+    -webkit-animation: fadeOut 0.3s;
+    -moz-animation: fadeOut 0.3s;
+    animation: fadeOut 0.3s;
+    visibility: visible;
+}
+
+.animate.fadeRight.ng-hide-remove {
+    animation: fadeInRight 0.6s;
+    -moz-animation: fadeInRight 0.6s;
+    -webkit-animation: fadeInRight 0.6s;
+}
+
+.animate.fadeDown.ng-hide-add {
+    -webkit-animation: fadeOut 0.3s;
+    -moz-animation: fadeOut 0.3s;
+    animation: fadeOut 0.3s;
+    visibility: visible;
+}
+
+.animate.fadeDown.ng-hide-remove {
+    animation: fadeInDown 0.6s;
+    -moz-animation: fadeInDown 0.6s;
+    -webkit-animation: fadeInDown 0.6s;
+}
+
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+
+.shimmer {
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right,  #F5F7F8 42%, #F2F1F1 68%, #F5F7F8 68%);
+    background-repeat: no-repeat;
+    background-size: 800px 104px;
+    position: relative;
+}
+
+@keyframes spinner {
+ to {transform: rotate(360deg);}
+}
+
+@-webkit-keyframes spinner {
+ to {-webkit-transform: rotate(360deg);}
+}
+
+.spinner {
+  color: $brand-primary;
+  animation: spinner 1s linear infinite;
+  display: inline-block!important;
+}
+
+@-webkit-keyframes three-quarters {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-moz-keyframes three-quarters {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-o-keyframes three-quarters {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes three-quarters {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }

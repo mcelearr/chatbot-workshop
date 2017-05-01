@@ -1,0 +1,24 @@
+{
+    "QUESTIONS": {
+        "QUESTION_ONE": "Difficulty sleeping",
+        "QUESTION_ONE_SUBLINE": "Have you had any difficulty sleeping during the last month, specifically because of your asthma?",
+        "QUESTION_TWO": "Symptoms",
+        "QUESTION_TWO_SUBLINE": "Have you had any difficulty sleeping during the last month, specifically because of your asthma?",
+        "QUESTION_THREE": "Second Symptoms",
+        "QUESTION_THREE_SUBLINE": "Have you also experienced any of the other symptoms?",
+        "QUESTION_FOUR": "Activites",
+        "QUESTION_FOUR_SUBLINE": "In the past month has asthma interfered with your usual activities?",
+        "QUESTION_FIVE": "Second Activites",
+        "QUESTION_FIVE_SUBLINE": "Has your asthma impacted any of the other activities?",
+        "QUESTION_SIX": "Downloads",
+        "QUESTION_SIX_SUBLINE": "Download type",
+        "QUESTION_SEVEN": "See A Doctor",
+        "QUESTION_SEVEN_SUBLINE": "I really hope that you feel prepared to go and seek more advice from your doctor?",
+        "QUESTION_EIGHT": "Useful",
+        "QUESTION_EIGHT_SUBLINE": "Have you had any difficulty sleeping during the last month, specifically because of your asthma?",
+        "QUESTION_NINE": "Downloads",
+        "QUESTION_NINE_SUBLINE": "Have you had any difficulty sleeping during the last month, specifically because of your asthma?",
+        "REASONS": "Free text answers",
+        "REASONS_SUBLINE": "List of all free text answers"
+    }
+}

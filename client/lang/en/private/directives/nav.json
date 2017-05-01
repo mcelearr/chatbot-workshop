@@ -1,0 +1,15 @@
+{
+    "NAV": {
+        "ACCOUNT": "Account",
+        "SUBMIT_TICKET": "Submit ticket",
+        "LOGOUT": "Logout",
+        "APPLICATION": "Workspace",
+        "REPORTS": "Overview",
+        "CONVERSATIONS": "Conversations",
+        "CONSOLE": "Chat Console",
+        "STUDIO": "Connector Studio",
+        "QUESTIONS": "Analytics",
+        "SETTINGS": "Settings",
+        "FLAGGED": "Flagged Messages"
+    }
+}

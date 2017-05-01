@@ -1,0 +1,38 @@
+
+
+$baseline:20px;
+$section-padding-multiplier: 4;
+
+// FONTS
+$base-font-size:16px; // Used for REM mixin
+$header-font-size: 36px;
+$header-secondary-font-size: 25px;
+$header-third-font-size: 20px;
+$header-fourth-font-size: 15px;
+$font-main:'Source Sans Pro', sans-serif;
+$font-helvetica:Helvetica, Arial, sans-serif;
+
+// BUTTONS
+$button-underline-height: 2px;
+$button-outline-height: 1px;
+$button-radius: 5px;
+
+// Headerbar - nav
+$headerbar-height: 55px;
+$logo-container-width: 170px;
+$nav-hover-type: 'underline';
+$private-header-height: 60px;
+
+// Hero Image
+$hero-image-background: url(https://s3.amazonaws.com/fmg_static/IndexTopVideo_compressed.jpg);
+$hero-banner-title-size: 60px;
+$hero-banner-subtitle-size: 25px;
+
+// CARDS AND PANELS
+$card-border-radius: 5px;
+
+// Icon rows
+$default-icon-size: 16px;
+
+//Helpers
+$background-image-primary: url(https://www.firstmilegeo.com/assets/TourTopImage-b23566b5566126223bea7aeba1a3f3c26070567627b33e9b9280b38e573098a9.jpg);

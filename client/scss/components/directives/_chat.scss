@@ -1,0 +1,453 @@
+
+$green: #a9a9a9;
+$blue: #94C2ED;
+$orange: #E38968;
+$gray: #92959E;
+
+chat, .chat-outer {
+display:block;
+margin-top: -20px;
+height: 100%;
+position: relative;
+
+.align-right{
+	text-align: right;
+}
+
+
+.chat-container{
+	width: 100%;
+}
+
+.chat {
+  width: 100%;
+  float:left;
+  background: #F2F5F8;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: relative;
+  color: #434651;
+  text-align: left;
+
+	.message-data-name{
+		font-size: 15px;
+	}
+
+  ul{
+  	list-style: none;
+    height: 100%;
+    overflow-y: scroll;
+    padding: 20px;
+
+  	li{
+	  	display: block;
+	    width: 100%;
+	    float: right;
+  	}
+  }
+
+  .chat-header {
+    padding: 15px;
+    border-bottom: 1px solid $border;
+    border-top: 1px solid $border;
+	width: 100%;
+	background: #f2f5f8;
+    img {
+      float: left;
+    }
+
+    @include breakpoint(medium){
+    	padding: 20px 40px;
+    }
+
+    .chat-about {
+      float: left;
+      padding-left: 10px;
+      margin-top: 6px;
+    }
+
+    .chat-with {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .chat-num-messages {
+      color: $gray;
+    }
+
+    .fa-star {
+      float: right;
+      color: #D8DADF;
+      font-size: 20px;
+      margin-top: 12px;
+    }
+  }
+
+  .chat-history {
+    border-bottom: 2px solid #fff;
+    background: #FFF;
+    overflow: hidden;
+    height: calc(100vh - 200px);
+
+    .message-data {
+      margin-bottom: 15px;
+    }
+
+    .message-data-time {
+      color: lighten($gray, 8%);
+      padding-left: 6px;
+      font-size: 10px;
+    }
+
+    .meta{
+	   	margin-bottom: 15px;
+	    display: inline-block;
+    }
+
+    .meta, .meta span{
+    	font-size: 12px;
+    	padding-left: 3px;
+    	color: lighten($gray, 8%);
+
+
+    	.emotion-dot{
+			width: 10px;
+		    height: 10px;
+		    display: inline-block;
+		    border-radius: 50%;
+		    background: $info;
+		    margin-left: 5px;
+		    margin-right: 5px;
+
+		    &.success{
+		    	background: $success;
+		    }
+
+		    &.danger{
+		    	background: $danger;
+		    }
+    	}
+
+    	a{
+    		color: lighten($gray, 8%);
+			font-size: 12px;
+			text-decoration: underline;
+    	}
+    }
+
+    .message {
+      color: white;
+      padding: 18px 20px;
+      line-height: 26px;
+      font-size: 16px;
+      border-radius: 7px;
+      margin-bottom: 5px;
+      width: 90%;
+      position: relative;
+
+      &.image{
+      	padding: 5px;
+      	max-width: 350px;
+      }
+
+  	 &.message-button{
+  	 	max-width: 350px;
+
+  	 }
+
+      &.generic{
+      	background: #fff;
+	    margin-bottom: 10px;
+	    padding: 5px;
+      	max-width: 350px;
+
+	      	.chat-card{
+	      		border: 1px solid $border;
+	      		-webkit-box-shadow: 0px 0px 13px -1px rgba(0,0,0,0.15);
+				-moz-box-shadow: 0px 0px 13px -1px rgba(0,0,0,0.15);
+				box-shadow: 0px 0px 13px -1px rgba(0,0,0,0.15);
+	      	}
+	   }
+
+	.chat-card{
+		background: #fff;
+    	margin-bottom: 10px;
+
+    	.content{
+    		padding: 15px;
+    		border-top: 1px solid $border;
+    		margin-top: -10px;
+
+    		h2{
+    			margin-bottom: 0;
+    		}
+
+    		> span{
+    			color: lighten($gray, 8%);
+    			font-weight: 300;
+    			margin-bottom: 10px;
+    			display: inline-block;
+    			font-size: 14px;
+    		}
+
+    	}
+	}
+
+	.chat-list {
+		background: #fff;
+		border-bottom: 1px solid lighten($gray, 8%);
+
+			.content {
+				display: inline-block;
+				padding: 8px 0 8px 8px;
+				max-width: 75%;
+
+				h2{
+					margin-bottom: 0;
+				}
+
+				> span{
+					color: lighten($gray, 8%);
+					font-weight: 300;
+					margin-bottom: 10px;
+					display: inline-block;
+					font-size: 14px;
+				}
+
+			}
+			.list-image {
+				text-align: center;
+				width: 24%;
+				display: inline-block;
+				float: right;
+				padding: $baseline $baseline/2 0 0;
+
+				img {
+					max-width: 75px;
+				}
+			}
+
+		.chat-list-button {
+			max-width: 115px;
+		}
+	}
+
+      img{
+      	width: 100%;
+      }
+
+      &.with-loading{
+      	width: 70px;
+
+      	&:after{
+    		left: 26%!important;
+    	}
+    }
+
+
+      &:after {
+        bottom: 99%;
+        left: 5%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-bottom-color: $brand-primary;
+        border-width: 10px;
+        margin-left: -10px;
+      }
+    }
+
+    .my-message {
+      background: $brand-primary;
+      width: 85%;
+
+      @include breakpoint(medium){
+      	    width: 40%;
+      }
+    }
+
+    .other-message {
+      background: $green;
+      float: right;
+      width: 85%;
+
+      @include breakpoint(medium){
+      	    width: 40%;
+      }
+
+      &:after {
+        border-bottom-color: $green;
+        left: 95%;
+      }
+    }
+
+	#loader{
+		display: none;
+	}
+
+  	.loading {
+
+	      &::before {
+	        @include ball;
+	        border: none;
+	        animation-delay: .15s;
+	      }
+
+	      & span {
+	        display: block;
+	        font-size: 0;
+	        width: 20px;
+	        height: 10px;
+	        position: relative;
+
+	        &::before {
+	          @include ball;
+	          margin-left: -7px;
+	        }
+
+	        &::after {
+	          @include ball;
+	          margin-left: 7px;
+	          animation-delay: .3s;
+	        }
+	      }
+	    }
+
+  }
+
+  .chat-message {
+    padding: 20px;
+    border-top: 1px solid #d8d8d8;
+	width: 100%;
+	background: #f2f5f8;
+    overflow: hidden;
+
+
+    textarea {
+    width: 75%;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    resize: none;
+    font-size: 14px;
+
+
+    @include breakpoint(medium){
+    	 width: 94%;
+    }
+
+    }
+
+    .fa-file-o, .fa-file-image-o {
+      font-size: 16px;
+      color: gray;
+      cursor: pointer;
+
+    }
+
+    button {
+      float: right;
+      color: $blue;
+      font-size: 16px;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      background: #F2F5F8;
+
+      &:hover {
+        color: darken($blue, 7%);
+      }
+    }
+  }
+}
+
+.online, .offline, .me {
+    margin-right: 3px;
+    font-size: 10px;
+  }
+
+.online {
+  color: $green;
+}
+
+.offline {
+  color: $orange;
+}
+
+.me {
+  color: $blue;
+}
+
+@keyframes bounce {
+  0% { transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  4.7% { transform: matrix3d(0.45, 0, 0, 0, 0, 0.45, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  9.41% { transform: matrix3d(0.883, 0, 0, 0, 0, 0.883, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  14.11% { transform: matrix3d(1.141, 0, 0, 0, 0, 1.141, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  18.72% { transform: matrix3d(1.212, 0, 0, 0, 0, 1.212, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  24.32% { transform: matrix3d(1.151, 0, 0, 0, 0, 1.151, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  29.93% { transform: matrix3d(1.048, 0, 0, 0, 0, 1.048, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  35.54% { transform: matrix3d(0.979, 0, 0, 0, 0, 0.979, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  41.04% { transform: matrix3d(0.961, 0, 0, 0, 0, 0.961, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  52.15% { transform: matrix3d(0.991, 0, 0, 0, 0, 0.991, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  63.26% { transform: matrix3d(1.007, 0, 0, 0, 0, 1.007, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  85.49% { transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  100% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+}
+
+
+@keyframes ball {
+  from {
+    transform: translateY(0) scaleY(.8);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+}
+
+.chat-outer{
+	margin-top: 0;
+
+	.chat .chat-history{
+		height: calc(100vh - 190px);
+
+		li {
+			margin-bottom: 15px;
+		}
+
+		.message{
+			padding:15px;
+			font-size: 14px;
+			margin-bottom: 15px;
+
+			@include breakpoint(medium){
+				padding:18px 20px;
+				font-size: 15px;
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+
+#page-loader{
+	position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #FFF;
+    z-index: 999;
+    text-align: center;
+
+    img{
+    	margin-top: 10%;
+    }
+}

@@ -1,0 +1,1052 @@
+.button--container{
+	width: 100%;
+	margin-bottom:5px;
+	margin-top:5px;
+	.button{
+		width: 100%;
+	}
+}
+
+.button{
+	@include border-radius($button-radius);
+	padding: ($baseline / 2) $baseline;
+	color: $text-primary;
+	display:inline-block;
+	border: 0;
+	min-width: 100%;
+    text-align: center;
+	margin-right: $baseline / 2;
+    margin-bottom: $baseline / 4;
+    width: 100%;
+
+    @include breakpoint(medium) {
+          width: auto;
+    }
+
+
+    &.button--clear{
+        background: transparent;
+        color: $danger;
+
+        i, span {
+            color: $danger;
+        }
+    }
+
+
+    &.full-width{
+    	width: 100%;
+    }
+
+    &.button--small{
+    	min-width: 50px;
+    	padding:$baseline / 2;
+
+    }
+
+	@include breakpoint(medium) {
+          margin-bottom: 0;
+          min-width: 115px;
+    }
+
+
+	&.button--size-larger {
+		@include rem("font-size", $base-font-size + 5);
+
+		i, span {
+			@include rem("font-size", $base-font-size + 5);
+		}
+	}
+
+	&.button--size-large {
+		@include rem("font-size", $base-font-size + 2);
+
+		i, span {
+			@include rem("font-size", $base-font-size + 2);
+		}
+	}
+
+	&.button--size-small {
+		@include rem("font-size", $base-font-size - 2);
+
+		i, span {
+			@include rem("font-size", $base-font-size - 2);
+		}
+	}
+
+	&.button--size-smaller {
+		@include rem("font-size", $base-font-size - 5);
+		padding: ($baseline / 4) $baseline / 2;
+
+		i, span {
+			@include rem("font-size", $base-font-size - 5);
+		}
+	}
+
+	&.button--size-tiny {
+		@include rem("font-size", $base-font-size - 8);
+		padding: ($baseline / 4) $baseline / 2;
+
+		i, span {
+			@include rem("font-size", $base-font-size - 8);
+		}
+	}
+
+	&.button--white{
+		background:#FFF;
+		color: $text-primary;
+
+		i, span {
+			color: $text-primary;
+		}
+
+		&-outline{
+			background: transparent;
+			border: $button-outline-height solid #FFF;
+			color: #FFF;
+
+			&.mid-point-one{
+					border: $button-outline-height solid #E42265;
+					color: #E42265;
+			}
+
+			&.mid-point-two{
+					border: $button-outline-height solid #E53750;
+					color: #E53750;
+			}
+
+			i, span {
+				color: $brand-primary;
+			}
+
+			&:hover, &.active{
+				color: $text-primary;
+				background: #FFF;
+
+				i, span {
+					color: $text-primary;
+				}
+			}
+		}
+
+		&:hover{
+			background:darken( $brand-primary, 10%);
+		}
+
+		i, span {
+			color: $text-invert;
+		}
+	}
+
+	&.button--primary{
+		background: $brand-primary;
+		color: $text-invert;
+
+		i, span {
+			color: $text-invert;
+		}
+
+		&-underline{
+			background: $brand-primary;
+			color: $text-invert;
+			border-bottom: $button-underline-height solid darken( $brand-primary, 10%);
+
+			i, span {
+				color: $text-invert;
+			}
+
+			&:hover {
+				background:darken( $brand-primary, 10%);
+			}
+		}
+
+		&-outline{
+			background: transparent;
+			border: $button-outline-height solid $brand-primary;
+			color: $brand-primary;
+
+			&.mid-point-one{
+					border: $button-outline-height solid #E42265;
+					color: #E42265;
+			}
+
+			&.mid-point-two{
+					border: $button-outline-height solid #E53750;
+					color: #E53750;
+			}
+
+			i, span {
+				color: $brand-primary;
+			}
+
+			&:hover{
+				color: $text-invert;
+				background: $brand-primary;
+
+				i, span {
+					color: $text-invert;
+				}
+			}
+		}
+
+		&:hover{
+			background:darken( $brand-primary, 10%);
+		}
+
+		i, span {
+			color: $text-invert;
+		}
+	}
+
+	&.button--secondary{
+		background: $brand-secondary;
+		color: $text-invert;
+
+		i, span {
+			color: $text-invert;
+		}
+
+		&-underline{
+			background: $brand-secondary;
+			color: $text-invert;
+			border-bottom: $button-underline-height solid darken( $brand-secondary, 10%);
+
+			i, span {
+				color: $text-invert;
+			}
+
+			&:hover {
+				background:darken( $brand-secondary, 10%);
+			}
+		}
+
+		&-outline{
+			background: transparent;
+			border: $button-outline-height solid $brand-secondary;
+			color: $brand-secondary;
+
+			i, span {
+				color: $brand-secondary;
+			}
+
+			&:hover{
+				color: $text-invert;
+				background: $brand-secondary;
+
+				i, span {
+					color: $text-invert;
+				}
+			}
+		}
+
+		&:hover{
+			background:darken( $brand-secondary, 10%);
+		}
+	}
+
+	&.button--third{
+		background: $brand-third;
+		color: $text-invert;
+
+		i, span {
+			color: $text-invert;
+		}
+
+		&-underline{
+			background: $brand-third;
+			color: $text-invert;
+			border-bottom: $button-underline-height solid darken( $brand-third, 10%);
+
+			i, span {
+				color: $text-invert;
+			}
+
+			&:hover {
+				background:darken( $brand-third, 10%);
+			}
+		}
+
+		&-outline{
+			background: transparent;
+			border: $button-outline-height solid $brand-third;
+			color: $brand-third;
+
+			i, span {
+				color: $brand-third;
+			}
+
+			&:hover{
+				color: $text-invert;
+				background: $brand-third;
+
+				i, span {
+					color:$text-invert;
+				}
+			}
+		}
+
+		&:hover{
+			background:darken( $brand-third, 10%);
+		}
+	}
+
+	&.button--fourth{
+		background: $brand-fourth;
+		color: $text-invert;
+
+		i, span {
+			color: $text-invert;
+		}
+
+		&-underline{
+			background: $brand-fourth;
+			color: $text-invert;
+			border-bottom: $button-underline-height solid darken( $brand-fourth, 10%);
+
+			i, span {
+				color: $text-invert;
+			}
+
+			&:hover {
+				background:darken( $brand-fourth, 10%);
+			}
+		}
+
+		&-outline{
+			background: transparent;
+			border: $button-outline-height solid $brand-fourth;
+			color: $brand-fourth;
+
+			i, span {
+				color: $brand-fourth;
+			}
+
+			&:hover{
+				color: $text-invert;
+				background: $brand-fourth;
+
+				i, span{
+					color: $text-invert;
+				}
+			}
+		}
+
+		&:hover{
+			background:darken( $brand-fourth, 10%);
+		}
+	}
+
+		&.button--white{
+		background: #FFF;
+		color: $text-invert;
+
+		i, span {
+			color: $text-invert;
+		}
+
+		&-underline{
+			background: #FFF;
+			color: $text-invert;
+			border-bottom: $button-underline-height solid darken( #FFF, 10%);
+
+			i, span {
+				color: $text-invert;
+			}
+
+			&:hover {
+				background:darken(#FFF, 10%);
+			}
+		}
+
+		&-outline{
+			background: transparent;
+			border: $button-outline-height solid #FFF;
+			color: #FFF;
+
+			i, span {
+				color: #FFF;
+			}
+
+			&:hover{
+				color: $brand-primary;
+				background: #FFF;
+
+				i, span{
+					color: $brand-primary;
+				}
+			}
+		}
+
+		&:hover{
+			background:darken( #FFF, 10%);
+		}
+	}
+
+	&.button--success{
+		background: $success;
+		color: $text-invert;
+
+		i, span {
+			color: $text-invert;
+		}
+
+		&-underline{
+			background: $success;
+			color: $text-invert;
+			border-bottom: $button-underline-height solid darken( $success, 10%);
+
+			i, span {
+				color: $text-invert;
+			}
+
+			&:hover {
+				background:darken( $success, 10%);
+			}
+		}
+
+		&-outline{
+			background: transparent;
+			border: $button-outline-height solid $success;
+			color: $success;
+
+			i, span {
+				color: $success;
+			}
+
+			&:hover{
+				color: $text-invert;
+				background: $success;
+
+				i, span {
+					color: $text-invert;
+				}
+			}
+
+			&[disabled]{
+				border: $button-outline-height solid $cancel;
+				color: $cancel;
+				background: transparent;
+
+				i, span {
+				color: $cancel;
+				}
+
+			}
+		}
+
+		&:hover{
+			background:darken( $success, 10%);
+		}
+
+		i, span {
+			color: $text-invert;
+		}
+	}
+
+
+	&.button--dropbox{
+		background: $dropbox;
+		color: $text-invert;
+		position: relative;
+		padding-left: 43px;
+
+		i, span {
+			color: #FFF;
+		}
+
+		&:before{
+			content:'\f22f';
+			position: absolute;
+			font-family: 'Ionicons';
+		    bottom: 0;
+		    top: 0;
+		    background: darken($dropbox, 5%);
+		    left: 0;
+		    padding: 10px;
+		    vertical-align: middle;
+		    padding-top: 13px;
+		    border-radius: 4px 0 0 4px;
+		}
+
+		&-underline{
+			background: $dropbox;
+			color: $text-invert;
+			border-bottom: $button-underline-height solid darken( $dropbox, 10%);
+
+			i, span {
+				color: $text-invert;
+			}
+
+			&:hover {
+				background:darken( $dropbox, 10%);
+			}
+		}
+
+		&-outline{
+			background: transparent;
+			border: $button-outline-height solid $dropbox;
+			color: $dropbox;
+
+			i, span {
+				color: $dropbox;
+			}
+
+			&:hover{
+				color: $text-invert;
+				background: $dropbox;
+
+				i, span {
+					color: $text-invert;
+				}
+			}
+
+			&[disabled]{
+				border: $button-outline-height solid $cancel;
+				color: $cancel;
+				background: transparent;
+
+				i, span {
+				color: $cancel;
+				}
+
+			}
+		}
+
+		&:hover{
+			background:darken( $dropbox, 10%);
+
+			&:before{
+		    	background: darken($dropbox, 10%);
+
+			}
+		}
+
+		i, span {
+			color: #FFF;
+		}
+
+		&.undo{
+			background: $danger;
+
+			&:before{
+				background: darken($danger, 5%);
+			}
+
+			&:hover{
+			background:darken( $danger, 10%);
+
+			&:before{
+		    	background: darken($danger, 10%);
+
+			}
+		}
+		}
+	}
+
+	&.button--google{
+		background: $google;
+		color: $text-invert;
+		position: relative;
+		padding-left: 43px;
+
+		i, span {
+			color: #FFF;
+		}
+
+		&:before{
+			content:'\f234';
+			position: absolute;
+			font-family: 'Ionicons';
+		    bottom: 0;
+		    top: 0;
+		    background: darken($google, 5%);
+		    left: 0;
+		    padding: 10px;
+		    vertical-align: middle;
+		    padding-top: 13px;
+		    border-radius: 4px 0 0 4px;
+		}
+
+		&-underline{
+			background: $google;
+			color: $text-invert;
+			border-bottom: $button-underline-height solid darken( $google, 10%);
+
+			i, span {
+				color: $text-invert;
+			}
+
+			&:hover {
+				background:darken( $google, 10%);
+			}
+		}
+
+		&-outline{
+			background: transparent;
+			border: $button-outline-height solid $google;
+			color: $google;
+
+			i, span {
+				color: $dropbox;
+			}
+
+			&:hover{
+				color: $text-invert;
+				background: $google;
+
+				i, span {
+					color: $text-invert;
+				}
+			}
+
+			&[disabled]{
+				border: $button-outline-height solid $cancel;
+				color: $cancel;
+				background: transparent;
+
+				i, span {
+				color: $cancel;
+				}
+
+			}
+		}
+
+		&:hover{
+			background:darken( $google, 10%);
+
+			&:before{
+		    	background: darken($google, 10%);
+
+			}
+		}
+
+		i, span {
+			color: #FFF;
+		}
+
+		&.undo{
+			background: $danger;
+
+			&:before{
+				background: darken($danger, 5%);
+			}
+
+			&:hover{
+			background:darken( $danger, 10%);
+
+			&:before{
+		    	background: darken($danger, 10%);
+
+			}
+		}
+		}
+	}
+
+	&.button--twitter{
+		background: $twitter;
+		color: $text-invert;
+		position: relative;
+		padding-left: 43px;
+
+		i, span {
+			color: #FFF;
+		}
+
+		&:before{
+			content:'\f243';
+			position: absolute;
+			font-family: 'Ionicons';
+		    bottom: 0;
+		    top: 0;
+		    background: darken($twitter, 5%);
+		    left: 0;
+		    padding: 10px;
+		    vertical-align: middle;
+		    padding-top: 13px;
+		    border-radius: 4px 0 0 4px;
+		}
+
+		&-underline{
+			background: $twitter;
+			color: $text-invert;
+			border-bottom: $button-underline-height solid darken( $twitter, 10%);
+
+			i, span {
+				color: $text-invert;
+			}
+
+			&:hover {
+				background:darken( $twitter, 10%);
+			}
+		}
+
+		&-outline{
+			background: transparent;
+			border: $button-outline-height solid $twitter;
+			color: $twitter;
+
+			i, span {
+				color: $twitter;
+			}
+
+			&:hover{
+				color: $text-invert;
+				background: $twitter;
+
+				i, span {
+					color: $text-invert;
+				}
+			}
+
+			&[disabled]{
+				border: $button-outline-height solid $cancel;
+				color: $cancel;
+				background: transparent;
+
+				i, span {
+				color: $cancel;
+				}
+
+			}
+		}
+
+		&:hover{
+			background:darken( $twitter, 10%);
+
+			&:before{
+		    	background: darken($twitter, 10%);
+
+			}
+		}
+
+		i, span {
+			color: #FFF;
+		}
+
+		&.undo{
+			background: $danger;
+
+			&:before{
+				background: darken($danger, 5%);
+			}
+
+			&:hover{
+			background:darken( $danger, 10%);
+
+			&:before{
+		    	background: darken($danger, 10%);
+
+			}
+		}
+		}
+	}
+
+	&.button--cancel{
+		background: $cancel;
+		color: $text-invert;
+
+		i, span {
+			color: $text-invert;
+		}
+
+		&-underline{
+			background: $cancel;
+			color: $text-invert;
+			border-bottom: $button-underline-height solid darken($cancel, 10%);
+
+			i, span {
+				color: $text-invert;
+			}
+
+			&:hover {
+				background:darken($cancel, 10%);
+			}
+		}
+
+		&-outline{
+			background: transparent;
+			border: $button-outline-height solid $cancel;
+			color: $cancel;
+
+			i, span {
+				color: $cancel;
+			}
+
+			&:hover{
+				color: $text-invert;
+				background: $cancel;
+
+				i, span{
+					color: $text-invert;
+				}
+			}
+		}
+
+		&:hover{
+			background:darken($cancel, 10%);
+		}
+	}
+
+	&.button--danger{
+		background: $danger;
+		color: $text-invert;
+
+		i, span {
+			color: $text-invert;
+		}
+
+		&-underline{
+			background: $danger;
+			color: $text-invert;
+			border-bottom: $button-underline-height solid darken($danger, 10%);
+
+			i, span {
+				color: $text-invert;
+			}
+
+			&:hover {
+				background:darken($danger, 10%);
+			}
+		}
+
+		&-outline{
+			background: transparent;
+			border: $button-outline-height solid $danger;
+			color: $danger;
+
+			i, span {
+				color: $danger;
+			}
+
+			&:hover{
+				color: $text-invert;
+				background: $danger;
+
+				i, span{
+					color: $text-invert;
+				}
+			}
+		}
+
+		&:hover{
+			background:darken($danger, 10%);
+		}
+	}
+}
+
+
+.button-list{
+		list-style: none;
+		margin:0;
+		padding: 0;
+
+		li{
+			margin-top: 10px;
+
+			button, .button{
+				width: 100%;
+				text-align:center;
+			}
+		}
+
+}
+
+
+.button[disabled]{
+	background: $cancel;
+	color: $text-invert;
+	opacity: 0.8;
+	cursor:not-allowed;
+
+	&:hover{
+		background: $cancel;
+		color: $text-invert;
+		opacity: 0.8;
+	}
+}
+
+.checkbox{
+	@extend .clearfix;
+	clear: both;
+    padding-top: 10px;
+    position: relative;
+    margin-bottom: 8px;
+    width:100%;
+
+    label{
+    	margin-bottom: 5px;
+    }
+
+    span{
+    	font-size: 16px;
+    }
+
+    &.always-full{
+    	input[type="radio"] + label, input[type="checkbox"] + label{
+			width:100%;
+			margin-bottom: 5px;
+
+			.button{
+				width:100%;
+			}
+		}
+    }
+
+   	&.always-half{
+    	input[type="radio"] + label, input[type="checkbox"] + label{
+			width:48%;
+			margin-bottom: 5px;
+			margin-right: 5px;
+
+			.button{
+				width:48%;
+			}
+		}
+    }
+
+	input[type="checkbox"]{
+		visibility: hidden;
+		position: absolute;
+		top:0;
+		left:0;
+	}
+
+
+	input[type="radio"] + label{
+		min-width:100%;
+
+		 @include breakpoint(large) {
+             min-width:200px;
+
+              .button{
+              	width:98%;
+              }
+        }
+	}
+
+	&.thirds{
+		input[type="radio"] + label, input[type="checkbox"] + label{
+					width:100%;
+					margin-bottom: 5px;
+
+		@include breakpoint(large) {
+	              width: 33.3%;
+
+	              .button{
+	              	width:98%;
+	              }
+            }
+    	}
+	}
+
+	&.halfs{
+		input[type="radio"] + label, input[type="checkbox"] + label{
+				width:100%;
+				margin-bottom: 5px;
+
+		@include breakpoint(medium) {
+	              width: 50%;
+
+	              .button{
+	              	width:98%;
+	              }
+            }
+    	}
+	}
+
+	input[type="checkbox"] + label .button{
+		//background: $cancel;
+	}
+
+	input[type="checkbox"]:checked + label .button{
+		background: $brand-fourth;
+		color:#FFF;
+		position: relative;
+
+
+		&:before{
+			content:'\f122';
+			position: absolute;
+			font-family: 'Ionicons';
+		    bottom: 0;
+		    top: 0;
+		    background: darken($brand-fourth, 5%);
+		    left: 0;
+		    padding: 10px;
+		    vertical-align: middle;
+		    padding-top: 13px;
+		}
+	}
+
+	input[type="radio"]{
+		visibility: hidden;
+		position: absolute;
+		top:0;
+		left:0;
+	}
+
+	input[type="radio"] + label .button{
+		//background: $cancel;
+	}
+
+	input[type="radio"]:checked + label .button{
+		background: $brand-fourth;
+		color:#FFF;
+		position: relative;
+
+		&:before{
+			content:'\f122';
+			font-family: 'Ionicons';
+			position: absolute;
+		    bottom: 0;
+		    top: 0;
+		    background: darken($brand-fourth, 5%);
+		    left: 0;
+		    padding: 10px;
+		    vertical-align: middle;
+		    padding-top: 13px;
+    	}
+	}
+}
+
+
+.button.is-loading[disabled]{
+	background: $success!important;
+	opacity: 1!important;
+}
+
+/* Styles for old versions of IE */
+.btn-spinner {
+  font-family: sans-serif;
+  font-weight: 100; }
+
+/* :not(:required) hides this rule from IE9 and below */
+.btn-spinner:not(:required) {
+  -webkit-animation: three-quarters 1250ms infinite linear;
+  -moz-animation: three-quarters 1250ms infinite linear;
+  -ms-animation: three-quarters 1250ms infinite linear;
+  -o-animation: three-quarters 1250ms infinite linear;
+  animation: three-quarters 1250ms infinite linear;
+  border: 2px solid #FFF;
+  border-right-color: transparent;
+  border-radius: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 18px;
+  height: 18px; }
+
+.btn-spinner:not(:required) {
+  margin-left: -22px;
+  opacity: 0;
+  transition: 0.4s margin ease-out;
+}
+
+.is-loading .btn-spinner {
+  transition: 0.2s margin ease-in;
+  margin-left: 10px;
+  opacity: 1;
+}

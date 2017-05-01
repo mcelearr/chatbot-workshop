@@ -1,0 +1,109 @@
+
+h1 {
+	@include rem("font-size", $header-font-size / 1.5);
+	font-weight: 300;
+}
+
+h2 {
+	@include rem("font-size", $header-secondary-font-size  / 1.2);
+	font-weight: 300;
+}
+
+h3 {
+	@include rem("font-size", $header-third-font-size);
+}
+
+h4 {
+	@include rem("font-size", $header-fourth-font-size);
+}
+
+h1.container__title{
+	text-align:center;
+}
+
+@include breakpoint(medium) {
+	h1 {
+		@include rem("font-size", $header-font-size);
+	}
+
+	h2 {
+		@include rem("font-size", $header-secondary-font-size);
+	}
+
+	h3 {
+		@include rem("font-size", $header-third-font-size);
+	}
+
+	h4 {
+		@include rem("font-size", $header-fourth-font-size);
+	}
+
+	h1.container__title{
+		margin-left:5px;
+		text-align:left;
+	}
+
+}
+
+
+a, span, p, button, i{
+	@include rem("font-size", $base-font-size);
+}
+
+a {
+    text-decoration: none;
+    outline: 0 !important;
+}
+
+button, .button{
+	-webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5{
+	margin-bottom: $baseline / 2;
+		-webkit-font-smoothing: antialiased;
+}
+
+
+
+a, span, p, h1, h2, h3, h4, h5, i {
+	color: $text-primary;
+	letter-spacing: 0.5px;
+
+	&.bold{
+		font-weight: bold;
+	}
+
+	&.light{
+		font-weight: 300;
+	}
+
+	&.uppercase{
+		text-transform: uppercase;
+	}
+
+	&.capitalize{
+		text-transform: capitalize;
+	}
+
+	&.italic{
+		text-transform: capitalize;
+	}
+
+	&.primary{
+		color: $brand-primary;
+	}
+
+	&.secondary{
+		color: $brand-primary;
+	}
+
+	&.third{
+		color: $brand-third;
+	}
+
+	&.fourth{
+		color: $brand-fourth;
+	}
+}
+

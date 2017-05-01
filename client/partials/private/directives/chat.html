@@ -1,0 +1,111 @@
+<div class="chat-container clearfix">
+
+    <div class="chat">
+        <div class="chat-header clearfix">
+            <img src="/_img/tinka.png" alt="avatar" />
+
+            <div class="chat-about">
+                <div class="chat-with">Chat with Bot</div>
+                <div class="chat-num-messages">Bot Testing</div>
+            </div>
+        </div>
+        <!-- end chat-header -->
+
+        <div class="chat-history">
+
+            <ul id="chat-history">
+
+                <li ng-repeat="item in messages track by item.id">
+
+                    <div ng-if="item.isSelf">
+                        <div class="message-data align-right">
+                            <span class="message-data-time">{{item.time}}</span> &nbsp; &nbsp;
+                            <span class="message-data-name">You</span>
+                        </div>
+                        <div class="message other-message">
+                            {{item.message}}
+                        </div>
+                    </div>
+                    <div ng-if="!item.isSelf">
+                        <div class="message-data" ng-if="!item.isSelf">
+                            <span class="message-data-name">Bot</span>
+                            <span class="message-data-time">{{item.time}}</span>
+                        </div>
+                        <div class="message my-message {{item.type}}">
+                            <div ng-if="item.type == 'text'">
+                                {{item.message}}
+                            </div>
+                            <div ng-if="item.type == 'image'">
+                                <img src="{{item.message}}" alt="">
+                            </div>
+
+                            <div ng-if="item.type == 'generic'">
+                                <div ng-repeat="card in item.message" class="chat-card">
+                                    <img ng-src="{{card.image_url}}" alt="" ng-show="card.image_url">
+                                    <div class="content">
+                                        <h2>{{card.title}}</h2>
+                                        <span>{{card.subtitle}}</span>
+                                        <div ng-repeat="button in card.buttons" class="button--container">
+                                            <button type="button" class="button button--secondary" ng-click="processButton(button)">{{button.title}}</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div ng-if="item.type == 'message-button'">
+                                {{item.message}}
+                                <div class="content">
+                                    <div ng-repeat="button in item.result.buttons" class="button--container">
+                                        <button type="button" class="button button--white-outline" ng-click="processButton(button)">{{button.title}}</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div ng-if="item.type == 'list'">
+                                <div ng-repeat="row in item.payload.elements" class="chat-list">
+                                    <div class="content">
+                                        <h2>{{row.title}}</h2>
+                                        <span>{{row.subtitle}}</span>
+                                        <div ng-repeat="button in row.buttons" class="chat-list-button">
+                                            <button type="button" class="button button--primary-outline" ng-click="processButton(button)">{{button.title}}</button>
+                                        </div>
+                                    </div>
+                                    <div class="list-image">
+                                        <img ng-src="{{row.image_url}}" alt="" ng-show="row.image_url">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <span class="meta" ng-if="item.result.response">
+                            <span>Detected Tone:
+                                <span class="emotion-dot {{item.remotion}}"></span> {{item.emotion || 'neutral'}} | </span> <a href="" ng-click="retrain(item.result)">view details or re-train answer</a></span>
+                    </div>
+                </li>
+                <li id="loader">
+                    <div class="message-data" ng-if="!item.isSelf">
+                        <span class="message-data-name">Bot</span>
+                        <span class="message-data-time">{{item.time}}</span>
+                    </div>
+                    <div class="message my-message with-loading">
+                        <div class="loading">
+                            <span></span>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+        <!-- end chat-history -->
+
+        <div class="chat-message clearfix">
+            <textarea name="message-to-send" id="message-to-send" placeholder="Type your message" rows="1" ng-model="message"></textarea>
+            <button>Send</button>
+
+        </div>
+        <!-- end chat-message -->
+
+    </div>
+    <!-- end chat -->
+
+</div>
+<!-- end container -->

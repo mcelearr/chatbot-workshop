@@ -1,0 +1,12 @@
+{
+	"COMMON": {
+		"CLASSIFER": "Classifier",
+		"IMPORT": "Import",
+		"SAVE": "Save",
+		"CANCEL": "Cancel",
+		"CONFIRM": "Confirm",
+		"DELETE": "Delete",
+		"CREATE": "Create",
+		"UPDATE": "Update"
+	}
+}

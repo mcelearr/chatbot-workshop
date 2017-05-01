@@ -1,0 +1,47 @@
+html {
+	background: $background;
+	&.private{
+    		background: $page-background-alt;
+
+    	body{
+    		background: $page-background-alt;
+    	}
+	}
+}
+
+body {
+   font-family: $font-main;
+
+    input::-webkit-input-placeholder {
+       font-family: $font-main;
+       	font-weight: 400;
+		-webkit-font-smoothing: antialiased;
+    }
+
+    input:-ms-input-placeholder {
+        font-family: $font-main;
+       	font-weight: 400;
+		-webkit-font-smoothing: antialiased;
+    }
+
+    input:-moz-placeholder {
+      	font-family: $font-main;
+       	font-weight: 400;
+		-webkit-font-smoothing: antialiased;
+    }
+
+    input::-moz-placeholder {
+        font-family: $font-main;
+       	font-weight: 400;
+		-webkit-font-smoothing: antialiased;
+    }
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: 0;
+}

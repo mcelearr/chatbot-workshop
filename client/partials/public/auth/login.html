@@ -1,0 +1,33 @@
+<div id="canvas-background" class="canvas-background">
+	<canvas id="demo-canvas"></canvas>
+</div>
+<div class="centre-screen">
+	<div class="container">
+		<form name="loginForm" class="boxed" role="form" method="POST" ng-submit="login(loginForm.$valid,user)" novalidate>
+			<h1>{{appName}} {{'LOGIN.SUBHEADER' | translate}}</h1>
+			<p>{{'LOGIN.FORGOTTENPASSWORD' | translate}} <a href="/#/passwordreset">{{'LOGIN.RESETIT' | translate}}</a></p>
+			<ul ng-show="errors" class="alert alert-error"><li ng-repeat="error in errors">{{error}}</li></ul>
+			<div class="form-group">
+				<label><span>{{'LOGIN.FORM.EMAIL' | translate}} </span>
+					<span class="field-required" ng-show="loginForm.email.$pristine">*</span>
+					<span class="field-valid"  ng-show="loginForm.email.$dirty && loginForm.email.$valid"><i class="ion-checkmark-circled success"></i></span>
+					<span class="field-error" ng-show="loginForm.email.$dirty && loginForm.email.$invalid"><i class="ion-close-circled"></i></span>
+				</label>
+				<input type="text" class="form__control" name="email" placeholder="{{'LOGIN.FORM.EMAIL' | translate}}" ng-model="user.email" required>
+				<span class="field-error-message" ng-show="loginForm.email.$dirty && loginForm.email.$invalid">{{'LOGIN.FORM.EMAIL_ERROR' | translate}}</span>
+			</div>
+			<div class="form-group">
+				<label><span>{{'LOGIN.FORM.PASSWORD' | translate}} </span>
+					<span class="field-required" ng-show="loginForm.password.$pristine">*</span>
+					<span class="field-valid" ng-show="loginForm.password.$dirty && loginForm.password.$valid"><i class="ion-checkmark-circled success"></i></span>
+					<span class="field-error" ng-show="loginForm.password.$dirty && loginForm.password.$invalid"><i class="ion-close-circled"></i></span>
+				</label>
+				<input type="password" class="form__control" name="password" placeholder="{{'LOGIN.FORM.PASSWORD' | translate}}" ng-model="user.password" required>
+				<span class="field-error-message" ng-show="loginForm.password.$dirty && loginForm.password.$invalid">{{'LOGIN.FORM.PASSWORD_ERROR' | translate}}</span>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="button button--primary">{{'LOGIN.FORM.LOGIN' | translate}}</button>
+			</div>
+		</form>
+	</div>
+</div>
