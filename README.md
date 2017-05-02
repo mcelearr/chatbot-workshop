@@ -1,6 +1,10 @@
 # chatbot-workshop
 
-## Quickstart
+This is the bare bones version of Filament's Bot Framework for making chatbots with api.ai and facebook messenger.
+
+## Quickstart
+
+Use node version 6+ (I used 6.10.2)
 
 ```bash
 git clone https://github.com/mcelearr/chatbot-workshop.git & cd chatbot-workshop
@@ -16,6 +20,11 @@ DB_HOST=localhost
 DB_USER=yourrootname
 DB_PASSWORD=yourrootpassword
 DB_DATABASE=somedatabasename
+API_AI_CLIENT=
+API_AI_DEVELOPER=
+FACEBOOK_TOKEN=
+FACEBOOK_VERIFY=
+FACEBOOK_SECRET=
 ```
 
 If you are using the postgres CLI you can create a database with `createdb somedatabasename`
